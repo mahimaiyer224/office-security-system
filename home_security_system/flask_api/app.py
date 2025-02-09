@@ -3,8 +3,8 @@ import face_recognition
 import pickle
 
 app = Flask(__name__)
-
-with open('face_recognition\\face_encodings.pkl', 'rb') as f:
+filepath = "C:/Users/mahih/Desktop/IRP/home_security_system/face_recognition/face_encodings.pkl"
+with open(filepath, 'rb') as f:
     known_face_encodings = pickle.load(f)
 
 @app.route('/')
